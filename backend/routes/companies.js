@@ -1,7 +1,6 @@
 import express from 'express';
 import multer from 'multer';
 import pool from '../db.js';
-import supabase from '../supabase.js';
 import { authMiddleware } from '../middleware/auth.js';
 
 const router = express.Router();
