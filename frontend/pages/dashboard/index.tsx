@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import axios from '../../lib/axios';
 import { getToken } from '../../lib/auth';
 import { useRouter } from 'next/router';
+import TenderForm from '../../components/TenderForm';
+
+
 
 export default function Dashboard() {
   const [company, setCompany] = useState<any>(null);
