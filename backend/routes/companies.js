@@ -2,6 +2,7 @@ import express from 'express';
 import multer from 'multer';
 import pool from '../db.js';
 import { authMiddleware } from '../middleware/auth.js';
+import supabase from '../supabase.js';
 
 const router = express.Router();
 const upload = multer({ storage: multer.memoryStorage() });
@@ -104,5 +105,5 @@ router.post('/services', authMiddleware, async (req, res) => {
   }
 });
 
-
-//All of them use Authorization: Bearer <JWT> header for auth.
+//  Default export
+export default router;
